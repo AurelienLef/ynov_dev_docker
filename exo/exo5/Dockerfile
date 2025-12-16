@@ -16,6 +16,7 @@ FROM eclipse-temurin:25
 
 WORKDIR /opt/app
 
+# fichier jar introuvable & cmd en erreur
 RUN ls -l /build/target
 
 # COPY --from=builder /build/target/japp.jar .
