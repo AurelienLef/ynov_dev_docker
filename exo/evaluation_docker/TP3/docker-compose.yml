@@ -65,7 +65,7 @@ services:
       - "8081:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
-      - ./nginx/index.html:/usr/share/nginx/html/index.html 
+      - ./nginx/index.html:/usr/share/nginx/html/index.html
     networks:
       - eval-network
 
