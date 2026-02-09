@@ -56,6 +56,19 @@ services:
     networks:
       - eval-network
 
+  nginx:
+    image: nginx:alpine
+    container_name: eval-nginx
+    depends_on:
+      - api
+    ports:
+      - "8081:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - ./nginx/index.html:/usr/share/nginx/html/index.html 
+    networks:
+      - eval-network
+
 volumes:
   db_data:
   redis_data:
